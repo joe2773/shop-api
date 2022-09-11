@@ -10,3 +10,9 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - 5000:5000
+    db:
+        image: "mcr.microsoft.com/mssql/server"
+        environment:
+            #user is sa
+            SA_PASSWORD: "123pwd123"
+            ACCEPT_EULA: "Y"
