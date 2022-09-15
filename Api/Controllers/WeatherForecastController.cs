@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace c_sharp_docker.Controllers;
+namespace shopApi.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
