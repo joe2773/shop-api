@@ -1,4 +1,4 @@
-namespace c_sharp_docker;
+namespace shopApi;
 
 public class WeatherForecast
 {
