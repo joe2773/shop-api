@@ -14,65 +14,32 @@ public class ProductController: ControllerBase{
     
     [Route("cakes")]
     [HttpGet]
-    public Cake[] GetAllCakes()
+    public string GetAllCakes()
     {
         //Return productService.GetAllCakes();
-        return Cakes;
+        return "cakes";
     }
 
     [Route("cupcakes")]
     [HttpGet]
-    public Cupcake[] GetAllCupcakes()
+    public string GetAllCupcakes()
     {
         //Return productService.GetAllCupcakes();
-        return Cupcakes;
+        return "Cupcakes";
     }
 
     [Route("cakes/{id}")]
     [HttpGet]
-    public Cake GetCake(int id){
+    public string GetCake(int id){
         //Return productService.GetCake(id);
-        return Cakes[id];
+        return "cake";
     }
 
     [Route("cupcakes/{id}")]
     [HttpGet]
-    public Cupcake GetCupcake(int id){
+    public string GetCupcake(int id){
         //Return productService.getCupcake(id);
-        return Cupcakes[id];
+        return "cupcake";
     }
-    private static readonly Cake[] Cakes = 
-    {
-        new Cake()
-        {
-            Id = 1,
-            Name = "Chocolate"
-        },
-        new Cake(){
-            Id = 2,
-            Name = "Vanilla"
-        },
-        new Cake(){
-            Id = 3,
-            Name = "Strawberry"
-        }
-    };
-
-    private static readonly Cupcake[] Cupcakes = 
-    {
-        new Cupcake()
-        {
-            Id = 1,
-            Name = "Chocolate"
-        },
-        new Cupcake(){
-            Id = 2,
-            Name = "Vanilla"
-        },
-        new Cupcake(){
-            Id = 3,
-            Name = "Strawberry"
-        }
-    };
 
 }
